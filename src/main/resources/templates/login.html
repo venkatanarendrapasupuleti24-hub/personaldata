@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Login</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="bg-image">
+
+<div class="main-container">
+
+    <div class="auth-container">
+
+        <!-- LEFT SECTION -->
+
+        <div class="left-panel">
+
+            <div>
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <p>
+                    Access your SmartVault dashboard
+                    and manage your finances efficiently.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SECTION -->
+
+        <div class="right-panel">
+
+            <div class="form-card">
+
+                <h2>
+                    Login
+                </h2>
+
+                <p th:text="${error}"
+                   class="error-text">
+                </p>
+
+                <form th:action="@{/login}"
+                      method="post">
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input type="email"
+                               name="email"
+                               placeholder="Enter email"
+                               required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input type="password"
+                               name="password"
+                               placeholder="Enter password"
+                               required>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <p class="bottom-text">
+
+                    Don't have an account?
+
+                    <a href="/register">
+                        Register
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Uploaded Files</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>
+            Uploaded Files
+        </h2>
+
+        <table>
+
+            <tr>
+
+                <th>
+                    File Name
+                </th>
+
+                <th>
+                    Open
+                </th>
+
+            </tr>
+
+            <tr th:each="file : ${files}">
+
+                <td th:text="${file.fileName}">
+                </td>
+
+                <td>
+
+                    <a th:href="${file.filePath}"
+                       target="_blank">
+
+                        View File
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

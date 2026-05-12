@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Register</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="auth-container">
+
+        <!-- LEFT -->
+
+        <div class="left-section">
+
+            <h1>
+                SmartVault
+            </h1>
+
+            <p>
+                Manage your expenses,
+                store files securely,
+                and track your finances smarter.
+            </p>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right-section">
+
+            <div class="form-box">
+
+                <h2>Create Account</h2>
+                <p th:text="${error}"
+                   class="error-text">
+                </p>
+                <form th:action="@{/register}"
+                      th:object="${user}"
+                      method="post">
+
+                    <div class="input-group">
+
+                        <label>Full Name</label>
+
+                        <input type="text"
+                               th:field="*{name}"
+                               placeholder="Enter your name"
+                               required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input type="email"
+                               th:field="*{email}"
+                               placeholder="Enter your email"
+                               required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input type="password"
+                               th:field="*{password}"
+                               placeholder="Enter password"
+                               required>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn">
+
+                        Register
+
+                    </button>
+
+                </form>
+
+                <p class="bottom-text">
+
+                    Already have an account?
+
+                    <a href="/login">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
