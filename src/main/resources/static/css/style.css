@@ -1184,3 +1184,160 @@ body{
 
     transform:translateY(-3px);
 }
+.delete-link{
+
+    color:white;
+
+    background:#ef4444;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+.top-actions{
+
+    margin-bottom:20px;
+
+    text-align:right;
+}
+
+.upload-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    justify-content:center;
+}
+
+.file-link{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.delete-link{
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+}
+
+th, td{
+
+    padding:20px;
+
+    text-align:center;
+}
+
+th:first-child,
+td:first-child{
+
+    width:60%;
+}
+
+th:last-child,
+td:last-child{
+
+    width:40%;
+}
+
+.action-buttons{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    gap:12px;
+
+    margin-left:20px;
+}
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th,
+td{
+
+    padding:20px;
+
+    text-align:center;
+}
+
+/* FILE NAME COLUMN */
+
+th:first-child,
+td:first-child{
+
+    width:50%;
+
+    word-break:break-word;
+}
+
+/* ACTIONS COLUMN */
+
+th:last-child,
+td:last-child{
+
+    width:50%;
+}
+
+/* BUTTON ALIGNMENT */
+
+.action-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}

@@ -3,6 +3,7 @@ package com.personal.expense.service;
 import com.personal.expense.model.UploadedFile;
 import com.personal.expense.repository.UploadedFileRepository;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,5 +29,12 @@ public class FileService {
     getAllFiles() {
 
         return uploadedFileRepository.findAll();
+    }
+    @Transactional
+    public void deleteFile(
+            String fileName) {
+
+        uploadedFileRepository
+                .deleteByFileName(fileName);
     }
 }

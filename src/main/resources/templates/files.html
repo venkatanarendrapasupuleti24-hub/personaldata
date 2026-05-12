@@ -17,9 +17,26 @@
 
     <div class="card">
 
+        <!-- TITLE -->
+
         <h2>
             Uploaded Files
         </h2>
+
+        <!-- TOP BUTTON -->
+
+        <div class="top-actions">
+
+            <a href="/upload"
+               class="upload-btn">
+
+                Upload New File
+
+            </a>
+
+        </div>
+
+        <!-- TABLE -->
 
         <table>
 
@@ -30,24 +47,44 @@
                 </th>
 
                 <th>
-                    Open
+                    Actions
                 </th>
 
             </tr>
 
             <tr th:each="file : ${files}">
 
+                <!-- FILE NAME -->
+
                 <td th:text="${file.fileName}">
                 </td>
 
+                <!-- ACTION BUTTONS -->
+
                 <td>
 
-                    <a th:href="${file.filePath}"
-                       target="_blank">
+                    <div class="action-buttons">
 
-                        View File
+                        <!-- OPEN -->
 
-                    </a>
+                        <a th:href="@{/view-file/{name}(name=${file.fileName})}"
+                           target="_blank"
+                           class="file-link">
+
+                            Open
+
+                        </a>
+
+                        <!-- DELETE -->
+
+                        <a th:href="@{/delete-file/{name}(name=${file.fileName})}"
+                           class="delete-link">
+
+                            Delete
+
+                        </a>
+
+                    </div>
 
                 </td>
 
